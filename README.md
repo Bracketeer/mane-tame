@@ -30,12 +30,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Start Express server
 `node app.js`
 
-## Create .env file in the root of the folder with at least these variables set to whatever environment you are deploying in
-`
+## Create .env 
+
+put it in the root of the project with at least these variables set to whatever environment you are deploying in
+```
 HOST=http://localhost
 PORT=3000
 IP=127.0.0.1
 ENV=(dev|test|prod)
 DB=(link to your mongo db)
 SECRET=(your secret)
-`
+```
