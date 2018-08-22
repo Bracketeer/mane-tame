@@ -1,0 +1,22 @@
+<div class="calendar">
+  <div class="dateheader">
+    <div class="arrow" (click)="date = newDate(-1)"><</div>
+    <div class="dateheadercontainer">
+      {{months[displayMonth]}}
+      <span class="year">{{currentYear}}</span>
+    </div>
+    <div class="arrow" (click)="date = newDate(1)">></div>
+  </div>
+  <div class="calendargrid">
+    <div class="day" *ngFor="let day of days">{{day}}</div>
+    <ng-container *ngFor="let date of monthgrid; let i = index">
+      <div class="date" *ngIf="i > (firstDay - 1) && i < (lastDay + firstDay); else blank" [ngClass]="highlightedDay === i ? 'highlightedday': null" (click)="highlightedDay = i">
+        <div class="datenumber" [ngClass]="(i + 1) - firstDay === currentDay && this.displayMonth === this.currentMonth ? 'currentday': null">{{i - (firstDay - 1)}}</div>
+        <div class="daydetails"></div>
+      </div>
+        <ng-template #blank>
+          <div class="dateoutofrange"></div>
+        </ng-template>
+    </ng-container>
+  </div>
+</div>
