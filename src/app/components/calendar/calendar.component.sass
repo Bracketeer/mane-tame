@@ -1,6 +1,6 @@
 .calendar
-  width: 700px
-  margin: auto
+  max-width: 700px
+  margin: 20px
 .day
   text-align: center
   width: calc(100% / 7)
@@ -17,6 +17,7 @@
   border-radius: 3px
   transition: .3s ease all
   cursor: pointer
+  overflow: hidden
   &:hover
     box-shadow: 0px 0px 3px rgba(0,0,0,.2)
 .dateoutofrange
@@ -73,6 +74,6 @@
   background: teal
   color: #ffffff
 .highlightedday
-  border: 1px solid transparentize(teal, .8)
+  border: 1px solid transparentize(teal, 0)
   box-shadow: 0px 0px 5px transparentize(teal, 0) !important
   transition: .3s ease all

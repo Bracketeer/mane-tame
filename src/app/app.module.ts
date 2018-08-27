@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CaledarComponent } from './components/caledar/caledar.component';
+import { CalendarComponent } from './components/calendar/calendar.component';
+import { DayOverviewComponent } from './components/calendar/day-overview/day-overview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CaledarComponent
+    CalendarComponent,
+    DayOverviewComponent
   ],
   imports: [
     BrowserModule
